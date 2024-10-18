@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download The DevGame_UE4.20.3</title>
+</head>
+<body>
+
+    <h1>Download The DevGame_UE4.20.3</h1>
+    <!-- Button that triggers the download -->
+    <button onclick="downloadFolder()">Download Folder</button>
+
+    <script>
+        function downloadFolder() {
+            // Path to the zipped folder
+            const folderZipPath = 'UE GAME1.rar'; // Replace this with the correct path to your rar file
+            // Create an invisible link element
+            const link = document.createElement('a');
+            link.href = folderZipPath;
+            link.download = folderZipPath.split('/').pop(); // Automatically set the download name from the file path
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link); // Clean up the DOM after clicking the link
+        }
+    </script>
+
+</body>
+</html>
